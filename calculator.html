@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .calculator {text-align: center;font-size: 40px;padding: 0 0 10px;color: deeppink;text-shadow: 2px 2px black;}
+        
+        .calculator1 {text-align: center;border:2px green dotted ;width: 325px; background-color: indianred;margin: 0 auto; border-radius: 10px;}
+        .calculator1:hover{background-color: lawngreen;}
+        .calculator1{box-shadow: 5px 5px 2px blue;}
+        input[type="button"]{color: black;width: 75px;background-color: darkcyan;height: 50px;font-weight: bold;}
+        input[type="button"]:focus{background-color: darkorange; width: 100px; transition: 1s;cursor: pointer;}
+        #result{width: 300px; height: 100px;padding: 10px;margin-bottom: 5px;letter-spacing: 1px;text-align: right;font-size: 30px;}
+        
+    </style>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">Calculator</div>
+    <div class="calculator1">
+        <input type="text" name="" id="result" maxlength="10"><br>
+        <input type="button" value="C">
+        <input type="button" value="+/-">
+        <input type="button" value="%">
+        <input type="button" value=","><br>
+        <input type="button" value="7" onclick="insertNumber(7)">
+        <input type="button" value="8">
+        <input type="button" value="9">
+        <input type="button" value="*"><br>
+        <input type="button" value="4">
+        <input type="button" value="5">
+        <input type="button" value="6">
+        <input type="button" value="-"><br>
+        <input type="button" value="1">
+        <input type="button" value="2">
+        <input type="button" value="3">
+        <input type="button" value="+"><br>
+        <input type="button" value="0">
+        <input type="button" value=".">
+        <input type="button" value="DEL">
+        <input type="button" value="=" onclick="insertNumber('=')"><br>
+    </div>
+    <footer style="margin-left: 300px;font-size: 5; text-align: center; margin-top: 10px;">*Designed by <a href="#"><b>Hasan Kamruzzaman</b></a> <a href="https://www.youtube.com/watch?v=WalbIsByVNE">(Hopeless man)</a> on <i>2020.07.30.</i></footer>
+    
+    <script>
+        function insertNumber(number) {document.querySelector("#result").value=document.querySelector("#result").value+number;}
+        /*function insertNumber(value) {var value = document.querySelector("#result").value;
+                                        document.querySelector("#result").value = eval(value);}*/
+            
+        
+    </script>
+</body>
+</html>
